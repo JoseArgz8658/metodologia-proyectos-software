@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Laboratorio visual y metodología reutilizable para proyectos de software.">
+  <title>Metodología de Proyectos de Software</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark">MP</span>
+      <span>Metodología de Software</span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#fundamentos">Fundamentos</a>
+      <a href="#componentes">Componentes</a>
+      <a href="#flujo">Flujo</a>
+    </nav>
+    <button id="themeToggle" class="icon-button" type="button" aria-label="Cambiar tema">◐</button>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero section">
+      <div class="hero-copy">
+        <span class="eyebrow">Laboratorio visual · Fase 1</span>
+        <h1>Una base reutilizable para diseñar y ejecutar proyectos de software.</h1>
+        <p>Este repositorio reúne metodología, decisiones, plantillas y componentes visuales para iniciar proyectos con una estructura consistente.</p>
+        <div class="actions">
+          <a class="button primary" href="#componentes">Explorar componentes</a>
+          <a class="button secondary" href="#flujo">Ver metodología</a>
+        </div>
+      </div>
+      <aside class="hero-panel card">
+        <span class="status"><span></span> Fase activa</span>
+        <h2>Fundación del sistema</h2>
+        <ul class="check-list">
+          <li>Repositorio metodológico</li>
+          <li>Design tokens iniciales</li>
+          <li>Componentes base</li>
+          <li>Preparación para GitHub Pages</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="fundamentos" class="section">
+      <div class="section-heading">
+        <span class="eyebrow">Fundamentos</span>
+        <h2>Principios que deben sobrevivir a cualquier tecnología.</h2>
+      </div>
+      <div class="grid three-columns">
+        <article class="card"><span class="card-number">01</span><h3>Claridad</h3><p>Cada fase debe tener objetivo, alcance, criterios de aceptación y evidencia.</p></article>
+        <article class="card"><span class="card-number">02</span><h3>Trazabilidad</h3><p>Las decisiones importantes deben quedar registradas y vinculadas al cambio realizado.</p></article>
+        <article class="card"><span class="card-number">03</span><h3>Reutilización</h3><p>Lo aprendido en un proyecto debe reducir el esfuerzo del siguiente.</p></article>
+      </div>
+    </section>
+
+    <section id="componentes" class="section surface-section">
+      <div class="section-heading">
+        <span class="eyebrow">UI Style Lab</span>
+        <h2>Componentes y estados iniciales.</h2>
+      </div>
+
+      <div class="component-grid">
+        <article class="card demo-card">
+          <h3>Botones</h3>
+          <div class="demo-row">
+            <button class="button primary" type="button">Principal</button>
+            <button class="button secondary" type="button">Secundario</button>
+            <button class="button ghost" type="button">Texto</button>
+            <button class="button primary" type="button" disabled>Deshabilitado</button>
+          </div>
+        </article>
+
+        <article class="card demo-card">
+          <h3>Formulario</h3>
+          <label class="field">Nombre del proyecto<input type="text" placeholder="Ej. App de inventario"></label>
+          <label class="field">Tipo de solución<select><option>Aplicación móvil</option><option>Sitio web</option><option>API</option></select></label>
+          <label class="checkbox"><input type="checkbox" checked> Usar documentación por fases</label>
+        </article>
+
+        <article class="card demo-card">
+          <h3>Estados</h3>
+          <div class="stack">
+            <div class="alert success"><strong>Completado</strong><span>La fase pasó sus criterios de aceptación.</span></div>
+            <div class="alert warning"><strong>Atención</strong><span>Existe una decisión pendiente.</span></div>
+            <div class="alert danger"><strong>Bloqueado</strong><span>Falta resolver una dependencia crítica.</span></div>
+          </div>
+        </article>
+
+        <article class="card demo-card">
+          <h3>Paleta base</h3>
+          <div class="swatches">
+            <div><span class="swatch primary-swatch"></span><small>Primary</small></div>
+            <div><span class="swatch accent-swatch"></span><small>Accent</small></div>
+            <div><span class="swatch surface-swatch"></span><small>Surface</small></div>
+            <div><span class="swatch text-swatch"></span><small>Text</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="flujo" class="section">
+      <div class="section-heading">
+        <span class="eyebrow">Flujo inicial</span>
+        <h2>Un proyecto avanza por evidencia, no por intuición.</h2>
+      </div>
+      <ol class="timeline">
+        <li><span>1</span><div><h3>Descubrimiento</h3><p>Problema, usuarios, restricciones y propósito.</p></div></li>
+        <li><span>2</span><div><h3>Planificación</h3><p>Alcance, riesgos, arquitectura y fases.</p></div></li>
+        <li><span>3</span><div><h3>Construcción</h3><p>Implementación incremental y validaciones frecuentes.</p></div></li>
+        <li><span>4</span><div><h3>Entrega</h3><p>Pruebas, documentación, despliegue y cierre.</p></div></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Metodología de Proyectos de Software · Laboratorio visual inicial</p>
+    <span id="currentYear"></span>
+  </footer>
+</body>
+</html>
