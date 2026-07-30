@@ -1,0 +1,206 @@
+/* Fase 5: correcciones responsive y controles interactivos del UI Style Lab. */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+main,
+header,
+footer,
+section,
+article,
+div,
+nav {
+  min-width: 0;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-copy,
+.hero-panel,
+.card,
+.token-layout > *,
+.component-grid > *,
+.three-columns > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+label,
+small,
+code {
+  overflow-wrap: anywhere;
+}
+
+.table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.lab-toolbar {
+  margin-bottom: 20px;
+  box-shadow: none;
+}
+
+.lab-toolbar-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.lab-toolbar-heading h3 {
+  margin: 4px 0 0;
+}
+
+.lab-controls {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.lab-controls .field {
+  min-width: 0;
+  margin-top: 0;
+}
+
+input[type="color"] {
+  min-height: 46px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.inline-control {
+  display: grid;
+  gap: 6px;
+  width: min(190px, 100%);
+  color: var(--color-text-muted);
+  font-size: .82rem;
+  font-weight: 750;
+}
+
+html[data-density="compact"] .card {
+  padding: 18px;
+}
+
+html[data-density="compact"] .section {
+  padding-block: 62px;
+}
+
+html[data-density="compact"] .button,
+html[data-density="compact"] input,
+html[data-density="compact"] select {
+  min-height: 38px;
+}
+
+html[data-radius="soft"] {
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+html[data-radius="square"] {
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-pill: 4px;
+}
+
+html[data-shadow="strong"] {
+  --shadow-1: 0 8px 18px rgba(31, 45, 82, .15);
+  --shadow-2: 0 18px 38px rgba(31, 45, 82, .22);
+  --shadow-3: 0 26px 60px rgba(31, 45, 82, .28);
+}
+
+html[data-shadow="none"] {
+  --shadow-1: none;
+  --shadow-2: none;
+  --shadow-3: none;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    width: min(calc(100% - 28px), var(--container));
+    gap: 28px;
+  }
+
+  .lab-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card-heading-row > * {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .section {
+    width: calc(100% - 24px);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.1rem, 13vw, 3.25rem);
+    letter-spacing: -.04em;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(1.8rem, 9vw, 2.5rem);
+  }
+
+  .type-display {
+    font-size: clamp(2rem, 13vw, 3rem);
+  }
+
+  .lab-toolbar-heading,
+  .card-heading-row {
+    flex-direction: column;
+  }
+
+  .lab-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-toolbar-heading .button,
+  .inline-control,
+  .actions .button,
+  .demo-row .button {
+    width: 100%;
+  }
+
+  .swatches {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .spacing-scale > div {
+    grid-template-columns: minmax(0, 1fr) 54px;
+  }
+
+  .toast {
+    right: 12px;
+    bottom: 12px;
+    max-width: calc(100% - 24px);
+  }
+}
+
+@supports not (overflow: clip) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
