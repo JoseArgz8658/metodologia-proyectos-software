@@ -9,84 +9,39 @@
   <script src="design-wizard.js" defer></script>
 </head>
 <body>
-  <header class="wizard-header">
-    <a href="index.html" class="back-button">← Regresar al UI Style Lab</a>
-    <span>Asistente de diseño</span>
-  </header>
+  <header class="wizard-header"><a href="index.html" class="back-button">← Regresar al UI Style Lab</a><span>Asistente de diseño</span><a href="catalogo-estilos.html" class="back-button">Ver catálogo</a></header>
 
   <main class="wizard-shell">
-    <section class="wizard-intro">
-      <p class="eyebrow">Recomendador visual</p>
-      <h1>Construye una dirección de diseño respondiendo preguntas simples.</h1>
-      <p>Al terminar verás los estilos recomendados y una página de prueba generada con tus selecciones.</p>
-    </section>
+    <section class="wizard-intro"><p class="eyebrow">Recomendador visual</p><h1>Construye una dirección de diseño respondiendo preguntas simples.</h1><p>Al terminar verás los estilos recomendados y una página de prueba más completa con navegación, hero, métricas, componentes, formulario y contenido.</p></section>
 
     <section class="wizard-layout">
       <form id="designForm" class="question-panel">
         <div class="progress-row"><span id="stepLabel">Paso 1 de 5</span><progress id="progress" max="5" value="1"></progress></div>
-
-        <fieldset class="question-step active" data-step="1">
-          <legend>¿Qué tipo de página quieres crear?</legend>
-          <label><input type="radio" name="purpose" value="corporate" required> Empresa o servicio profesional</label>
-          <label><input type="radio" name="purpose" value="product"> Producto digital o aplicación</label>
-          <label><input type="radio" name="purpose" value="creative"> Portfolio, campaña o marca creativa</label>
-          <label><input type="radio" name="purpose" value="dashboard"> Dashboard, panel o portal</label>
-        </fieldset>
-
-        <fieldset class="question-step" data-step="2">
-          <legend>¿Qué personalidad debe transmitir?</legend>
-          <label><input type="radio" name="personality" value="serious" required> Seria, clara y profesional</label>
-          <label><input type="radio" name="personality" value="premium"> Moderna y premium</label>
-          <label><input type="radio" name="personality" value="friendly"> Amigable y cercana</label>
-          <label><input type="radio" name="personality" value="bold"> Atrevida y diferente</label>
-        </fieldset>
-
-        <fieldset class="question-step" data-step="3">
-          <legend>¿Cuánta información mostrará?</legend>
-          <label><input type="radio" name="density" value="low" required> Poca, con espacios amplios</label>
-          <label><input type="radio" name="density" value="medium"> Una cantidad equilibrada</label>
-          <label><input type="radio" name="density" value="high"> Mucha información y módulos</label>
-        </fieldset>
-
-        <fieldset class="question-step" data-step="4">
-          <legend>¿Qué prioridad tiene la accesibilidad?</legend>
-          <label><input type="radio" name="accessibility" value="high" required> Muy alta: contraste y claridad primero</label>
-          <label><input type="radio" name="accessibility" value="balanced"> Equilibrada con la estética</label>
-          <label><input type="radio" name="accessibility" value="experimental"> Puedo aceptar una estética experimental</label>
-        </fieldset>
-
-        <fieldset class="question-step" data-step="5">
-          <legend>Elige una paleta inicial</legend>
-          <label><input type="radio" name="palette" value="blue" required> Azul profesional</label>
-          <label><input type="radio" name="palette" value="purple"> Morado creativo</label>
-          <label><input type="radio" name="palette" value="green"> Verde natural</label>
-          <label><input type="radio" name="palette" value="warm"> Cálida y energética</label>
-        </fieldset>
-
-        <div class="wizard-actions">
-          <button id="previousStep" type="button" disabled>Anterior</button>
-          <button id="nextStep" type="button">Siguiente</button>
-          <button id="showResult" type="submit" hidden>Ver recomendación</button>
-        </div>
+        <fieldset class="question-step active" data-step="1"><legend>¿Qué tipo de página quieres crear?</legend><label><input type="radio" name="purpose" value="corporate" required> Empresa o servicio profesional</label><label><input type="radio" name="purpose" value="product"> Producto digital o aplicación</label><label><input type="radio" name="purpose" value="creative"> Portfolio, campaña o marca creativa</label><label><input type="radio" name="purpose" value="dashboard"> Dashboard, panel o portal</label></fieldset>
+        <fieldset class="question-step" data-step="2"><legend>¿Qué personalidad debe transmitir?</legend><label><input type="radio" name="personality" value="serious" required> Seria, clara y profesional</label><label><input type="radio" name="personality" value="premium"> Moderna y premium</label><label><input type="radio" name="personality" value="friendly"> Amigable y cercana</label><label><input type="radio" name="personality" value="bold"> Atrevida y diferente</label></fieldset>
+        <fieldset class="question-step" data-step="3"><legend>¿Cuánta información mostrará?</legend><label><input type="radio" name="density" value="low" required> Poca, con espacios amplios</label><label><input type="radio" name="density" value="medium"> Una cantidad equilibrada</label><label><input type="radio" name="density" value="high"> Mucha información y módulos</label></fieldset>
+        <fieldset class="question-step" data-step="4"><legend>¿Qué prioridad tiene la accesibilidad?</legend><label><input type="radio" name="accessibility" value="high" required> Muy alta: contraste y claridad primero</label><label><input type="radio" name="accessibility" value="balanced"> Equilibrada con la estética</label><label><input type="radio" name="accessibility" value="experimental"> Puedo aceptar una estética experimental</label></fieldset>
+        <fieldset class="question-step" data-step="5"><legend>Elige una paleta inicial</legend><label><input type="radio" name="palette" value="blue" required> Azul profesional</label><label><input type="radio" name="palette" value="purple"> Morado creativo</label><label><input type="radio" name="palette" value="green"> Verde natural</label><label><input type="radio" name="palette" value="warm"> Cálida y energética</label></fieldset>
+        <div class="wizard-actions"><button id="previousStep" type="button" disabled>Anterior</button><button id="nextStep" type="button">Siguiente</button><button id="showResult" type="submit" hidden>Ver recomendación</button></div>
       </form>
 
       <aside class="live-preview-wrap">
         <p class="preview-label">Vista previa en vivo</p>
         <div id="livePreview" class="site-preview preview-minimal palette-blue">
-          <nav><strong>Nova</strong><div><span>Inicio</span><span>Servicios</span><button>Contacto</button></div></nav>
-          <section class="preview-hero"><div><small>NUEVA EXPERIENCIA</small><h2>Una página pensada para tus objetivos.</h2><p>La apariencia cambiará según tus respuestas.</p><button>Comenzar</button></div><div class="preview-visual"><span>01</span><span>02</span><span>03</span></div></section>
-          <section class="preview-features"><article><strong>Rápido</strong><p>Contenido principal.</p></article><article><strong>Claro</strong><p>Jerarquía visual.</p></article><article><strong>Flexible</strong><p>Diseño adaptable.</p></article></section>
+          <nav><strong>Nova</strong><div><span>Inicio</span><span>Servicios</span><span>Proyectos</span><button>Contacto</button></div></nav>
+          <section class="preview-hero"><div><small>NUEVA EXPERIENCIA</small><h2>Una página pensada para tus objetivos.</h2><p>La apariencia completa cambia según tus respuestas.</p><div class="preview-actions"><button>Comenzar</button><button class="preview-secondary">Ver demo</button></div></div><div class="preview-visual"><span>01</span><span>02</span><span>03</span></div></section>
+          <section class="preview-stats"><article><small>PROYECTOS</small><strong>24</strong><span>+8 este mes</span></article><article><small>USUARIOS</small><strong>1.2K</strong><span>Activos</span></article><article><small>ESTADO</small><strong>98%</strong><span>Operativo</span></article></section>
+          <section class="preview-alert"><strong>Actualización disponible</strong><span>Tu espacio está listo para continuar.</span><button>Revisar</button></section>
+          <section class="preview-features"><article><span class="feature-icon">01</span><strong>Rápido</strong><p>Contenido principal y acciones claras.</p><a href="#">Conocer más →</a></article><article><span class="feature-icon">02</span><strong>Claro</strong><p>Jerarquía visual para cada sección.</p><a href="#">Conocer más →</a></article><article><span class="feature-icon">03</span><strong>Flexible</strong><p>Diseño adaptable a distintos dispositivos.</p><a href="#">Conocer más →</a></article></section>
+          <section class="preview-content"><div><small>CASO DESTACADO</small><h3>Contenido, imágenes y resultados dentro del mismo sistema visual.</h3><p>Esta sección permite observar textos más largos, etiquetas y composición entre columnas.</p><div class="preview-tags"><span>Responsive</span><span>Accesible</span><span>Escalable</span></div></div><div class="preview-chart"><span style="height:45%"></span><span style="height:75%"></span><span style="height:58%"></span><span style="height:90%"></span><span style="height:68%"></span></div></section>
+          <section class="preview-form"><div><small>CONTACTO</small><h3>Conversemos sobre tu proyecto</h3><p>También puedes comprobar cómo se verían campos, checks y botones.</p></div><div><label>Nombre<input type="text" placeholder="Tu nombre"></label><label>Correo<input type="email" placeholder="correo@ejemplo.cl"></label><label class="preview-check"><input type="checkbox" checked> Acepto recibir información</label><button>Enviar solicitud</button></div></section>
+          <section class="preview-testimonial"><blockquote>“La interfaz se siente coherente desde la navegación hasta el último formulario.”</blockquote><span>Cliente de ejemplo · Proyecto Nova</span></section>
+          <footer><strong>Nova</strong><span>Producto · Empresa · Contacto</span><small>© Vista previa del laboratorio</small></footer>
         </div>
       </aside>
     </section>
 
-    <section id="resultPanel" class="result-panel" hidden>
-      <p class="eyebrow">Resultado</p>
-      <h2 id="primaryRecommendation"></h2>
-      <p id="recommendationReason"></p>
-      <div id="recommendationList" class="recommendation-list"></div>
-      <div class="result-actions"><button id="restartWizard" type="button">Responder nuevamente</button><a href="index.html">Comparar todos los estilos</a></div>
-    </section>
+    <section id="resultPanel" class="result-panel" hidden><p class="eyebrow">Resultado</p><h2 id="primaryRecommendation"></h2><p id="recommendationReason"></p><div id="recommendationList" class="recommendation-list"></div><div class="result-actions"><button id="restartWizard" type="button">Responder nuevamente</button><a href="index.html">Comparar destacados</a><a href="catalogo-estilos.html">Explorar catálogo completo</a></div></section>
   </main>
 </body>
 </html>
