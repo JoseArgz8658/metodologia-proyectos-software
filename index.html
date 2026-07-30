@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" data-theme="light">
+<html lang="es" data-theme="light" data-density="comfortable" data-radius="rounded" data-shadow="soft">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,54 +10,32 @@
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
-
   <header class="topbar">
-    <a class="brand" href="#inicio" aria-label="Ir al inicio">
-      <span class="brand-mark" aria-hidden="true">MP</span>
-      <span>Metodología de Software</span>
-    </a>
-
+    <a class="brand" href="#inicio" aria-label="Ir al inicio"><span class="brand-mark" aria-hidden="true">MP</span><span>Metodología de Software</span></a>
     <button id="menuToggle" class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir navegación">☰</button>
-
     <nav id="mainNav" class="nav" aria-label="Navegación principal">
-      <a href="#fundamentos">Fundamentos</a>
-      <a href="#tokens">Tokens</a>
-      <a href="#componentes">Componentes</a>
-      <a href="#flujo">Flujo</a>
+      <a href="#fundamentos">Fundamentos</a><a href="#tokens">Tokens</a><a href="#componentes">Componentes</a><a href="#flujo">Flujo</a>
     </nav>
-
     <button id="themeToggle" class="icon-button" type="button" aria-label="Cambiar tema" aria-pressed="false">◐</button>
   </header>
 
   <main id="contenido">
     <section id="inicio" class="hero section">
       <div class="hero-copy">
-        <span class="eyebrow">Design System · Fase 2</span>
+        <span class="eyebrow">UI Style Lab · Fase 5</span>
         <h1>Una base reutilizable para diseñar y ejecutar proyectos de software.</h1>
-        <p>Este repositorio reúne metodología, decisiones, plantillas y componentes visuales para iniciar proyectos con una estructura consistente, accesible y escalable.</p>
-        <div class="actions">
-          <a class="button primary" href="#componentes">Explorar componentes</a>
-          <a class="button secondary" href="#tokens">Revisar tokens</a>
-        </div>
+        <p>Prueba componentes, modifica estilos y compara decisiones visuales sin editar manualmente el código.</p>
+        <div class="actions"><a class="button primary" href="#componentes">Abrir laboratorio</a><a class="button secondary" href="#tokens">Revisar tokens</a></div>
       </div>
-
       <aside class="hero-panel card">
-        <span class="status"><span aria-hidden="true"></span> Fase activa</span>
-        <h2>Sistema visual en construcción</h2>
-        <ul class="check-list">
-          <li>Tokens semánticos</li>
-          <li>Componentes y estados</li>
-          <li>Accesibilidad básica</li>
-          <li>Responsive móvil, escritorio y TV</li>
-        </ul>
+        <span class="status"><span aria-hidden="true"></span> Laboratorio activo</span>
+        <h2>Diseño adaptable e interactivo</h2>
+        <ul class="check-list"><li>Responsive móvil real</li><li>Controles visuales</li><li>Variantes reutilizables</li><li>Preferencias persistentes</li></ul>
       </aside>
     </section>
 
     <section id="fundamentos" class="section">
-      <div class="section-heading">
-        <span class="eyebrow">Fundamentos</span>
-        <h2>Principios que deben sobrevivir a cualquier tecnología.</h2>
-      </div>
+      <div class="section-heading"><span class="eyebrow">Fundamentos</span><h2>Principios que deben sobrevivir a cualquier tecnología.</h2></div>
       <div class="grid three-columns">
         <article class="card"><span class="card-number">01</span><h3>Claridad</h3><p>Cada fase debe tener objetivo, alcance, criterios de aceptación y evidencia.</p></article>
         <article class="card"><span class="card-number">02</span><h3>Trazabilidad</h3><p>Las decisiones importantes deben quedar registradas y vinculadas al cambio realizado.</p></article>
@@ -66,159 +44,47 @@
     </section>
 
     <section id="tokens" class="section surface-section">
-      <div class="section-heading">
-        <span class="eyebrow">Design tokens</span>
-        <h2>Decisiones visuales convertidas en variables reutilizables.</h2>
-        <p>Los componentes consumen nombres semánticos, evitando colores o medidas aisladas sin contexto.</p>
-      </div>
-
+      <div class="section-heading"><span class="eyebrow">Design tokens</span><h2>Decisiones visuales convertidas en variables reutilizables.</h2><p>Los componentes consumen nombres semánticos y responden a los controles del laboratorio.</p></div>
       <div class="token-layout">
-        <article class="card demo-card">
-          <h3>Colores semánticos</h3>
-          <div class="swatches">
-            <div><span class="swatch primary-swatch"></span><small>Primary</small></div>
-            <div><span class="swatch accent-swatch"></span><small>Accent</small></div>
-            <div><span class="swatch surface-swatch"></span><small>Surface</small></div>
-            <div><span class="swatch text-swatch"></span><small>Text</small></div>
-            <div><span class="swatch success-swatch"></span><small>Success</small></div>
-            <div><span class="swatch warning-swatch"></span><small>Warning</small></div>
-            <div><span class="swatch danger-swatch"></span><small>Danger</small></div>
-            <div><span class="swatch border-swatch"></span><small>Border</small></div>
-          </div>
-        </article>
-
-        <article class="card demo-card">
-          <h3>Escala de espaciado</h3>
-          <div class="spacing-scale" aria-label="Escala visual de espaciado">
-            <div><span class="space space-1"></span><code>4 px</code></div>
-            <div><span class="space space-2"></span><code>8 px</code></div>
-            <div><span class="space space-3"></span><code>12 px</code></div>
-            <div><span class="space space-4"></span><code>16 px</code></div>
-            <div><span class="space space-6"></span><code>24 px</code></div>
-            <div><span class="space space-8"></span><code>32 px</code></div>
-          </div>
-        </article>
-
-        <article class="card demo-card typography-demo">
-          <h3>Escala tipográfica</h3>
-          <p class="type-display">Display</p>
-          <p class="type-heading">Heading</p>
-          <p class="type-title">Title</p>
-          <p class="type-body">Body: texto principal para lectura y contenido.</p>
-          <p class="type-caption">Caption: metadatos y ayuda secundaria.</p>
-        </article>
-
-        <article class="card demo-card">
-          <h3>Radio y elevación</h3>
-          <div class="elevation-grid">
-            <div class="elevation elevation-1">Nivel 1</div>
-            <div class="elevation elevation-2">Nivel 2</div>
-            <div class="elevation elevation-3">Nivel 3</div>
-          </div>
-        </article>
+        <article class="card demo-card"><h3>Colores semánticos</h3><div class="swatches">
+          <div><span class="swatch primary-swatch"></span><small>Primary</small></div><div><span class="swatch accent-swatch"></span><small>Accent</small></div><div><span class="swatch surface-swatch"></span><small>Surface</small></div><div><span class="swatch text-swatch"></span><small>Text</small></div><div><span class="swatch success-swatch"></span><small>Success</small></div><div><span class="swatch warning-swatch"></span><small>Warning</small></div><div><span class="swatch danger-swatch"></span><small>Danger</small></div><div><span class="swatch border-swatch"></span><small>Border</small></div>
+        </div></article>
+        <article class="card demo-card"><h3>Escala de espaciado</h3><div class="spacing-scale"><div><span class="space space-1"></span><code>4 px</code></div><div><span class="space space-2"></span><code>8 px</code></div><div><span class="space space-3"></span><code>12 px</code></div><div><span class="space space-4"></span><code>16 px</code></div><div><span class="space space-6"></span><code>24 px</code></div><div><span class="space space-8"></span><code>32 px</code></div></div></article>
+        <article class="card demo-card typography-demo"><h3>Escala tipográfica</h3><p class="type-display">Display</p><p class="type-heading">Heading</p><p class="type-title">Title</p><p class="type-body">Body: texto principal para lectura y contenido.</p><p class="type-caption">Caption: metadatos y ayuda secundaria.</p></article>
+        <article class="card demo-card"><h3>Radio y elevación</h3><div class="elevation-grid"><div class="elevation elevation-1">Nivel 1</div><div class="elevation elevation-2">Nivel 2</div><div class="elevation elevation-3">Nivel 3</div></div></article>
       </div>
     </section>
 
     <section id="componentes" class="section">
-      <div class="section-heading">
-        <span class="eyebrow">UI Style Lab</span>
-        <h2>Componentes, variantes y estados.</h2>
-      </div>
+      <div class="section-heading"><span class="eyebrow">UI Style Lab</span><h2>Modifica cada decisión visual desde el navegador.</h2><p>Los controles cambian la apariencia en tiempo real y guardan la selección en este dispositivo.</p></div>
+
+      <section class="lab-toolbar card" aria-labelledby="labTitle">
+        <div class="lab-toolbar-heading"><div><span class="eyebrow">Controles globales</span><h3 id="labTitle">Configuración visual</h3></div><button id="resetStyles" class="button secondary small" type="button">Restablecer</button></div>
+        <div class="lab-controls">
+          <label class="field">Densidad<select id="densityControl"><option value="comfortable">Cómoda</option><option value="compact">Compacta</option></select></label>
+          <label class="field">Bordes<select id="radiusControl"><option value="rounded">Redondeados</option><option value="soft">Suaves</option><option value="square">Rectos</option></select></label>
+          <label class="field">Sombras<select id="shadowControl"><option value="soft">Suaves</option><option value="strong">Marcadas</option><option value="none">Sin sombras</option></select></label>
+          <label class="field">Color principal<input id="primaryColorControl" type="color" value="#3157d5"></label>
+        </div>
+      </section>
 
       <div class="component-grid">
         <article class="card demo-card">
-          <h3>Botones</h3>
-          <div class="demo-row">
-            <button class="button primary" type="button" data-toast="Acción principal ejecutada">Principal</button>
-            <button class="button secondary" type="button">Secundario</button>
-            <button class="button ghost" type="button">Texto</button>
-            <button class="button danger-button" type="button">Eliminar</button>
-            <button class="button primary small" type="button">Pequeño</button>
-            <button class="button primary" type="button" disabled>Deshabilitado</button>
-          </div>
+          <div class="card-heading-row"><div><h3>Botones</h3><p>Cambia la variante del botón de muestra.</p></div><label class="inline-control">Variante<select id="buttonVariantControl"><option value="primary">Principal</option><option value="secondary">Secundario</option><option value="ghost">Texto</option><option value="danger-button">Peligro</option></select></label></div>
+          <div class="demo-row"><button id="buttonPreview" class="button primary" type="button" data-toast="Acción de prueba ejecutada">Botón de muestra</button><button class="button primary small" type="button">Pequeño</button><button class="button primary" type="button" disabled>Deshabilitado</button></div>
         </article>
-
-        <article class="card demo-card">
-          <h3>Badges y estados</h3>
-          <div class="demo-row compact-row">
-            <span class="badge neutral">Borrador</span>
-            <span class="badge info">En revisión</span>
-            <span class="badge success">Completado</span>
-            <span class="badge warning">Pendiente</span>
-            <span class="badge danger">Bloqueado</span>
-          </div>
-        </article>
-
-        <article class="card demo-card">
-          <h3>Formulario</h3>
-          <label class="field">Nombre del proyecto<input type="text" placeholder="Ej. App de inventario"></label>
-          <label class="field">Tipo de solución<select><option>Aplicación móvil</option><option>Sitio web</option><option>API</option><option>Aplicación para TV</option></select></label>
-          <label class="field field-error">Identificador<input type="text" value="Proyecto con espacios" aria-describedby="idError" aria-invalid="true"><small id="idError">Utiliza minúsculas, números y guiones.</small></label>
-          <label class="checkbox"><input type="checkbox" checked> Usar documentación por fases</label>
-        </article>
-
-        <article class="card demo-card">
-          <h3>Mensajes</h3>
-          <div class="stack">
-            <div class="alert info"><strong>Información</strong><span>Este cambio no afecta producción.</span></div>
-            <div class="alert success"><strong>Completado</strong><span>La fase pasó sus criterios de aceptación.</span></div>
-            <div class="alert warning"><strong>Atención</strong><span>Existe una decisión pendiente.</span></div>
-            <div class="alert danger"><strong>Bloqueado</strong><span>Falta resolver una dependencia crítica.</span></div>
-          </div>
-        </article>
-
-        <article class="card demo-card full-span">
-          <div class="card-heading-row">
-            <div><h3>Tabla responsive</h3><p>En pantallas pequeñas permite desplazamiento horizontal sin romper el diseño.</p></div>
-            <button id="openModal" class="button secondary" type="button">Abrir modal</button>
-          </div>
-          <div class="table-wrapper" tabindex="0" aria-label="Tabla de fases del proyecto">
-            <table>
-              <thead><tr><th>Fase</th><th>Responsable</th><th>Estado</th><th>Evidencia</th></tr></thead>
-              <tbody>
-                <tr><td>Descubrimiento</td><td>Product Owner</td><td><span class="badge success">Completado</span></td><td>Brief validado</td></tr>
-                <tr><td>Diseño</td><td>UX/UI</td><td><span class="badge info">En revisión</span></td><td>Prototipo</td></tr>
-                <tr><td>Construcción</td><td>Desarrollo</td><td><span class="badge neutral">Borrador</span></td><td>Pull request</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
+        <article class="card demo-card"><h3>Badges y estados</h3><div class="demo-row compact-row"><span class="badge neutral">Borrador</span><span class="badge info">En revisión</span><span class="badge success">Completado</span><span class="badge warning">Pendiente</span><span class="badge danger">Bloqueado</span></div></article>
+        <article class="card demo-card"><h3>Formulario</h3><label class="field">Nombre del proyecto<input type="text" placeholder="Ej. App de inventario"></label><label class="field">Tipo de solución<select><option>Aplicación móvil</option><option>Sitio web</option><option>API</option><option>Aplicación para TV</option></select></label><label class="field field-error">Identificador<input type="text" value="Proyecto con espacios" aria-describedby="idError" aria-invalid="true"><small id="idError">Utiliza minúsculas, números y guiones.</small></label><label class="checkbox"><input type="checkbox" checked> Usar documentación por fases</label></article>
+        <article class="card demo-card"><h3>Mensajes</h3><div class="stack"><div class="alert info"><strong>Información</strong><span>Este cambio no afecta producción.</span></div><div class="alert success"><strong>Completado</strong><span>La fase pasó sus criterios de aceptación.</span></div><div class="alert warning"><strong>Atención</strong><span>Existe una decisión pendiente.</span></div><div class="alert danger"><strong>Bloqueado</strong><span>Falta resolver una dependencia crítica.</span></div></div></article>
+        <article class="card demo-card full-span"><div class="card-heading-row"><div><h3>Tabla responsive</h3><p>Solo esta zona permite desplazamiento horizontal cuando la tabla no cabe.</p></div><button id="openModal" class="button secondary" type="button">Abrir modal</button></div><div class="table-wrapper" tabindex="0" aria-label="Tabla de fases del proyecto"><table><thead><tr><th>Fase</th><th>Responsable</th><th>Estado</th><th>Evidencia</th></tr></thead><tbody><tr><td>Descubrimiento</td><td>Product Owner</td><td><span class="badge success">Completado</span></td><td>Brief validado</td></tr><tr><td>Diseño</td><td>UX/UI</td><td><span class="badge info">En revisión</span></td><td>Prototipo</td></tr><tr><td>Construcción</td><td>Desarrollo</td><td><span class="badge neutral">Borrador</span></td><td>Pull request</td></tr></tbody></table></div></article>
       </div>
     </section>
 
-    <section id="flujo" class="section">
-      <div class="section-heading">
-        <span class="eyebrow">Flujo base</span>
-        <h2>Un proyecto avanza por evidencia, no por intuición.</h2>
-      </div>
-      <ol class="timeline">
-        <li><span>1</span><div><h3>Descubrimiento</h3><p>Problema, usuarios, restricciones y propósito.</p></div></li>
-        <li><span>2</span><div><h3>Planificación</h3><p>Alcance, riesgos, arquitectura y fases.</p></div></li>
-        <li><span>3</span><div><h3>Construcción</h3><p>Implementación incremental y validaciones frecuentes.</p></div></li>
-        <li><span>4</span><div><h3>Entrega</h3><p>Pruebas, documentación, despliegue y cierre.</p></div></li>
-      </ol>
-    </section>
+    <section id="flujo" class="section"><div class="section-heading"><span class="eyebrow">Flujo base</span><h2>Un proyecto avanza por evidencia, no por intuición.</h2></div><ol class="timeline"><li><span>1</span><div><h3>Descubrimiento</h3><p>Problema, usuarios, restricciones y propósito.</p></div></li><li><span>2</span><div><h3>Planificación</h3><p>Alcance, riesgos, arquitectura y fases.</p></div></li><li><span>3</span><div><h3>Construcción</h3><p>Implementación incremental y validaciones frecuentes.</p></div></li><li><span>4</span><div><h3>Entrega</h3><p>Pruebas, documentación, despliegue y cierre.</p></div></li></ol></section>
   </main>
 
-  <dialog id="demoModal" class="modal" aria-labelledby="modalTitle">
-    <div class="modal-content">
-      <div class="card-heading-row">
-        <div><span class="eyebrow">Componente</span><h2 id="modalTitle">Modal accesible</h2></div>
-        <button id="closeModal" class="icon-button" type="button" aria-label="Cerrar modal">×</button>
-      </div>
-      <p>Utiliza el elemento nativo <code>dialog</code>, conserva el foco dentro del modal y permite cerrarlo con Escape.</p>
-      <div class="actions modal-actions">
-        <button id="cancelModal" class="button secondary" type="button">Cancelar</button>
-        <button id="confirmModal" class="button primary" type="button">Confirmar</button>
-      </div>
-    </div>
-  </dialog>
-
+  <dialog id="demoModal" class="modal" aria-labelledby="modalTitle"><div class="modal-content"><div class="card-heading-row"><div><span class="eyebrow">Componente</span><h2 id="modalTitle">Modal accesible</h2></div><button id="closeModal" class="icon-button" type="button" aria-label="Cerrar modal">×</button></div><p>Utiliza el elemento nativo <code>dialog</code> y permite cerrarlo con Escape.</p><div class="actions modal-actions"><button id="cancelModal" class="button secondary" type="button">Cancelar</button><button id="confirmModal" class="button primary" type="button">Confirmar</button></div></div></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
-
-  <footer class="footer">
-    <p>Metodología de Proyectos de Software · Design System</p>
-    <span id="currentYear"></span>
-  </footer>
+  <footer class="footer"><p>Metodología de Proyectos de Software · UI Style Lab</p><span id="currentYear"></span></footer>
 </body>
 </html>
