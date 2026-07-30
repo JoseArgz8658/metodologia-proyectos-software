@@ -204,3 +204,119 @@ html[data-shadow="none"] {
     overflow-x: hidden;
   }
 }
+
+/* Corrección móvil v2: elimina anchos residuales producidos por viewport, flex y controles nativos. */
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+body > *,
+main > *,
+.section,
+.topbar,
+.footer {
+  max-width: 100%;
+}
+
+.topbar,
+.footer {
+  width: 100%;
+  padding-left: max(14px, calc((100% - var(--container)) / 2));
+  padding-right: max(14px, calc((100% - var(--container)) / 2));
+}
+
+.hero,
+.grid,
+.token-layout,
+.component-grid,
+.lab-controls,
+.actions,
+.demo-row,
+.card-heading-row,
+.lab-toolbar-heading {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.hero > *,
+.grid > *,
+.token-layout > *,
+.component-grid > *,
+.lab-controls > *,
+.actions > *,
+.demo-row > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+input,
+select,
+button,
+textarea {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.table-wrapper {
+  display: block;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  contain: inline-size;
+}
+
+.table-wrapper table {
+  width: max-content;
+  min-width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 520px) {
+  .topbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 8px;
+  }
+
+  .brand {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .brand span:last-child {
+    display: none;
+  }
+
+  .menu-toggle {
+    margin-left: 0;
+  }
+
+  .section,
+  .hero {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .checkbox {
+    align-items: flex-start;
+  }
+
+  .checkbox input {
+    flex: 0 0 18px;
+  }
+}
