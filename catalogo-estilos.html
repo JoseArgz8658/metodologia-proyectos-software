@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Catálogo visual para explorar y elegir estilos de diseño web.">
+  <title>Catálogo de estilos UI</title>
+  <link rel="stylesheet" href="catalogo-estilos.css">
+  <script src="catalogo-estilos.js" defer></script>
+</head>
+<body>
+  <header class="catalog-header">
+    <a href="index.html">← Volver al UI Style Lab</a>
+    <strong>Catálogo de estilos</strong>
+    <a href="asistente-diseno.html">Usar asistente</a>
+  </header>
+
+  <main class="catalog-shell">
+    <section class="catalog-hero">
+      <p class="eyebrow">Biblioteca visual</p>
+      <h1>Mira muchos estilos, filtra y elige una dirección visual.</h1>
+      <p>Cada tarjeta resume la personalidad, usos recomendados y una mini interfaz representativa.</p>
+    </section>
+
+    <section class="catalog-tools" aria-label="Filtros del catálogo">
+      <label>Buscar estilo<input id="styleSearch" type="search" placeholder="Ej. minimal, retro, oscuro..."></label>
+      <label>Personalidad<select id="categoryFilter"><option value="all">Todas</option><option value="professional">Profesional</option><option value="friendly">Amigable</option><option value="creative">Creativa</option><option value="futuristic">Futurista</option><option value="content">Contenido</option></select></label>
+      <p id="resultCount" aria-live="polite"></p>
+    </section>
+
+    <section id="catalogGrid" class="catalog-grid">
+      <article class="catalog-card theme-minimal" data-name="minimalismo neominimalismo limpio profesional" data-category="professional"><div class="mini-ui"><span class="mini-nav"></span><strong>Minimalismo</strong><p>Claridad, espacio y jerarquía.</p><button>Continuar</button></div><div class="card-copy"><h2>Minimalismo</h2><p>Corporativos, SaaS, portfolios y productos centrados en tareas.</p><span>Profesional</span></div></article>
+      <article class="catalog-card theme-glass" data-name="glassmorphism vidrio premium moderno" data-category="futuristic"><div class="mini-ui"><span class="mini-nav"></span><strong>Glassmorphism</strong><p>Capas translúcidas y profundidad.</p><button>Abrir</button></div><div class="card-copy"><h2>Glassmorphism</h2><p>Productos premium, dashboards y experiencias visuales.</p><span>Futurista</span></div></article>
+      <article class="catalog-card theme-clay" data-name="claymorphism clay amigable suave infantil" data-category="friendly"><div class="mini-ui"><span class="mini-nav"></span><strong>Claymorphism</strong><p>Volumen suave y sensación táctil.</p><button>Crear</button></div><div class="card-copy"><h2>Claymorphism</h2><p>Educación, bienestar, infancia y marcas cercanas.</p><span>Amigable</span></div></article>
+      <article class="catalog-card theme-neo" data-name="neomorphism neomorfismo suave tecnológico" data-category="futuristic"><div class="mini-ui"><span class="mini-nav"></span><strong>Neomorphism</strong><p>Controles integrados en la superficie.</p><button>Activar</button></div><div class="card-copy"><h2>Neomorphism</h2><p>Controles, IoT y productos tecnológicos experimentales.</p><span>Futurista</span></div></article>
+      <article class="catalog-card theme-bento" data-name="bento ui modular dashboard" data-category="professional"><div class="mini-ui"><span class="mini-nav"></span><strong>Bento UI</strong><p>Módulos ordenados y escaneables.</p><button>Explorar</button></div><div class="card-copy"><h2>Bento UI</h2><p>Dashboards, portales, homepages y páginas de producto.</p><span>Profesional</span></div></article>
+      <article class="catalog-card theme-brutal" data-name="neo brutalismo brutal bold creativo" data-category="creative"><div class="mini-ui"><span class="mini-nav"></span><strong>NEO-BRUTAL</strong><p>Contraste fuerte y bordes visibles.</p><button>ENTRAR</button></div><div class="card-copy"><h2>Neo-Brutalismo</h2><p>Campañas, estudios creativos y marcas diferenciadoras.</p><span>Creativa</span></div></article>
+      <article class="catalog-card theme-material" data-name="material design google android sistema" data-category="professional"><div class="mini-ui"><span class="mini-nav"></span><strong>Material Design</strong><p>Patrones familiares y funcionales.</p><button>Guardar</button></div><div class="card-copy"><h2>Material Design</h2><p>Aplicaciones, sistemas administrativos y productos Android.</p><span>Profesional</span></div></article>
+      <article class="catalog-card theme-editorial" data-name="editorial revista contenido tipografía" data-category="content"><div class="mini-ui"><span class="mini-nav"></span><strong>Editorial</strong><p>Tipografía, ritmo y lectura.</p><button>Leer</button></div><div class="card-copy"><h2>Editorial</h2><p>Medios, blogs, cultura, moda y portfolios narrativos.</p><span>Contenido</span></div></article>
+      <article class="catalog-card theme-retro" data-name="retro web windows nostalgia pixel" data-category="creative"><div class="mini-ui"><span class="mini-nav"></span><strong>RETRO WEB</strong><p>Nostalgia digital intencional.</p><button>OK</button></div><div class="card-copy"><h2>Retro Web</h2><p>Videojuegos, portfolios, eventos y experiencias temáticas.</p><span>Creativa</span></div></article>
+      <article class="catalog-card theme-cyber" data-name="cyberpunk neón oscuro futurista gaming" data-category="futuristic"><div class="mini-ui"><span class="mini-nav"></span><strong>CYBERPUNK</strong><p>Neón, datos y oscuridad.</p><button>CONNECT</button></div><div class="card-copy"><h2>Cyberpunk</h2><p>Gaming, música, tecnología y entretenimiento.</p><span>Futurista</span></div></article>
+      <article class="catalog-card theme-dark" data-name="dark mode oscuro elegante premium" data-category="professional"><div class="mini-ui"><span class="mini-nav"></span><strong>Dark UI</strong><p>Contraste oscuro y enfoque.</p><button>Comenzar</button></div><div class="card-copy"><h2>Dark UI</h2><p>Herramientas técnicas, multimedia y uso prolongado.</p><span>Profesional</span></div></article>
+      <article class="catalog-card theme-gradient" data-name="aurora gradient degradado color moderno" data-category="creative"><div class="mini-ui"><span class="mini-nav"></span><strong>Aurora Gradient</strong><p>Color atmosférico y energía.</p><button>Descubrir</button></div><div class="card-copy"><h2>Aurora Gradient</h2><p>Startups, eventos, IA y productos juveniles.</p><span>Creativa</span></div></article>
+      <article class="catalog-card theme-swiss" data-name="swiss international tipográfico grid limpio" data-category="content"><div class="mini-ui"><span class="mini-nav"></span><strong>Swiss Style</strong><p>Grid, tipografía y precisión.</p><button>Ver más</button></div><div class="card-copy"><h2>Swiss Style</h2><p>Identidades, información, cultura y diseño institucional.</p><span>Contenido</span></div></article>
+      <article class="catalog-card theme-organic" data-name="organic natural formas verde bienestar" data-category="friendly"><div class="mini-ui"><span class="mini-nav"></span><strong>Organic UI</strong><p>Formas suaves y tonos naturales.</p><button>Conocer</button></div><div class="card-copy"><h2>Organic UI</h2><p>Salud, ecología, alimentación y bienestar.</p><span>Amigable</span></div></article>
+      <article class="catalog-card theme-luxury" data-name="luxury lujo elegante negro dorado premium" data-category="content"><div class="mini-ui"><span class="mini-nav"></span><strong>Luxury</strong><p>Elegancia, aire y exclusividad.</p><button>Explorar</button></div><div class="card-copy"><h2>Luxury</h2><p>Moda, hotelería, joyería y servicios premium.</p><span>Contenido</span></div></article>
+      <article class="catalog-card theme-y2k" data-name="y2k chrome pop retro futurista" data-category="creative"><div class="mini-ui"><span class="mini-nav"></span><strong>Y2K</strong><p>Brillo digital y cultura pop.</p><button>PLAY</button></div><div class="card-copy"><h2>Y2K</h2><p>Música, moda, entretenimiento y campañas juveniles.</p><span>Creativa</span></div></article>
+      <article class="catalog-card theme-monochrome" data-name="monochrome blanco negro alto contraste" data-category="professional"><div class="mini-ui"><span class="mini-nav"></span><strong>Monochrome</strong><p>Una sola gama, máxima disciplina.</p><button>Aceptar</button></div><div class="card-copy"><h2>Monochrome</h2><p>Arquitectura, fotografía, portfolios y marcas sobrias.</p><span>Profesional</span></div></article>
+      <article class="catalog-card theme-cartoon" data-name="cartoon playful divertido ilustrado amigable" data-category="friendly"><div class="mini-ui"><span class="mini-nav"></span><strong>Playful UI</strong><p>Color, formas y diversión.</p><button>¡Vamos!</button></div><div class="card-copy"><h2>Playful UI</h2><p>Educación, juegos, infancia y onboarding.</p><span>Amigable</span></div></article>
+    </section>
+
+    <p id="emptyState" class="empty-state" hidden>No encontramos estilos con esos filtros.</p>
+  </main>
+</body>
+</html>
