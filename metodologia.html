@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ciclo de vida y metodología reutilizable para proyectos de software.">
+  <title>Metodología de desarrollo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Volver al laboratorio visual"><span class="brand-mark" aria-hidden="true">MP</span><span>Metodología de Software</span></a>
+    <nav class="nav" aria-label="Navegación principal"><a href="#ciclo">Ciclo</a><a href="#puertas">Puertas</a><a href="#niveles">Niveles</a></nav>
+    <button id="themeToggle" class="icon-button" type="button" aria-label="Cambiar tema" aria-pressed="false">◐</button>
+  </header>
+  <main id="contenido">
+    <section class="hero section">
+      <div class="hero-copy"><span class="eyebrow">Metodología · Fase 3</span><h1>Un proyecto avanza mediante decisiones y evidencia verificable.</h1><p>El ciclo oficial conecta descubrimiento, requisitos, arquitectura, diseño, construcción, pruebas, entrega y aprendizaje sin depender de una tecnología específica.</p><div class="actions"><a class="button primary" href="#ciclo">Recorrer el ciclo</a><a class="button secondary" href="index.html">Ver Design System</a></div></div>
+      <aside class="hero-panel card"><span class="status"><span aria-hidden="true"></span> Marco operativo</span><h2>Reglas permanentes</h2><ul class="check-list"><li>Alcance explícito</li><li>Decisiones trazables</li><li>Trabajo por fases</li><li>Pruebas proporcionales al riesgo</li><li>Cierre con evidencia</li></ul></aside>
+    </section>
+    <section id="ciclo" class="section">
+      <div class="section-heading"><span class="eyebrow">Ciclo de vida</span><h2>Doce etapas conectadas por puertas de control.</h2></div>
+      <ol class="timeline">
+        <li><span>1</span><div><h3>Inicio y contexto</h3><p>Problema, propósito, actores, restricciones y éxito esperado.</p></div></li>
+        <li><span>2</span><div><h3>Descubrimiento</h3><p>Usuarios, procesos, evidencia, dependencias y riesgos iniciales.</p></div></li>
+        <li><span>3</span><div><h3>Requisitos y alcance</h3><p>Backlog, criterios de aceptación, reglas y exclusiones.</p></div></li>
+        <li><span>4</span><div><h3>Arquitectura y riesgos</h3><p>Decisiones técnicas, integraciones, datos, seguridad y ADR.</p></div></li>
+        <li><span>5</span><div><h3>Diseño UI/UX</h3><p>Flujos, estados, responsive, accesibilidad y prototipos.</p></div></li>
+        <li><span>6</span><div><h3>Planificación por fases</h3><p>Incrementos demostrables con alcance y pruebas definidas.</p></div></li>
+        <li><span>7</span><div><h3>Preparación técnica</h3><p>Repositorio, entornos, configuración y base ejecutable.</p></div></li>
+        <li><span>8</span><div><h3>Construcción incremental</h3><p>Ramas pequeñas, commits trazables y PR revisables.</p></div></li>
+        <li><span>9</span><div><h3>Validación y pruebas</h3><p>Evidencia funcional, técnica, visual, accesible y segura.</p></div></li>
+        <li><span>10</span><div><h3>Entrega y despliegue</h3><p>Versión, release notes, rollback y verificación.</p></div></li>
+        <li><span>11</span><div><h3>Operación</h3><p>Observabilidad, soporte, costos, incidentes y mantenimiento.</p></div></li>
+        <li><span>12</span><div><h3>Cierre y aprendizaje</h3><p>Resultados, deuda, métricas, lecciones y próximos pasos.</p></div></li>
+      </ol>
+    </section>
+    <section id="puertas" class="section surface-section">
+      <div class="section-heading"><span class="eyebrow">Control de calidad</span><h2>Antes de avanzar, cada fase debe poder demostrarse.</h2></div>
+      <div class="grid three-columns"><article class="card"><span class="card-number">Entrada</span><h3>Ready</h3><p>Objetivo claro, criterios verificables, dependencias controladas y forma de demostración.</p></article><article class="card"><span class="card-number">Ejecución</span><h3>Evidencia</h3><p>Commits, decisiones, pruebas, prototipos, métricas o documentos vinculados al cambio.</p></article><article class="card"><span class="card-number">Salida</span><h3>Done</h3><p>Aceptación cumplida, calidad revisada, documentación actualizada e integración completada.</p></article></div>
+    </section>
+    <section id="niveles" class="section">
+      <div class="section-heading"><span class="eyebrow">Adaptación</span><h2>El rigor aumenta con el tamaño y el riesgo.</h2></div>
+      <div class="grid three-columns"><article class="card"><span class="badge neutral">Nivel 1</span><h3>Pequeño</h3><p>README ampliado, backlog breve, arquitectura resumida y pruebas manuales documentadas.</p></article><article class="card"><span class="badge info">Nivel 2</span><h3>Estándar</h3><p>Documentación separada, ADR, Git Flow, ambientes, pruebas y estrategia de release.</p></article><article class="card"><span class="badge warning">Nivel 3</span><h3>Crítico</h3><p>Trazabilidad completa, seguridad formal, CI/CD, observabilidad, recuperación e incidentes.</p></article></div>
+    </section>
+  </main>
+  <footer class="footer"><p>Metodología de Proyectos de Software · Ciclo de vida</p><span id="currentYear"></span></footer>
+</body>
+</html>
